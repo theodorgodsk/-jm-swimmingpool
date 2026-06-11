@@ -117,12 +117,14 @@ a { -webkit-tap-highlight-color: transparent; }
   .bento-grid > div:nth-last-child(1) { border-radius: 0 0 20px 0 !important; }
   .bento-grid > div:nth-last-child(3) { border-radius: 0 0 0 20px !important; }
 
-  /* Service cards: 1 kolonne */
+  /* Service cards: 2 kolonner på mobil */
   .service-cards {
     grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: auto !important;
     gap: 12px !important;
   }
-  .service-cards > div { min-width: 0 !important; }
+  .service-cards > div { min-width: 0 !important; width: 100% !important; }
+  .service-card-link { width: 100% !important; }
   .service-card-inner {
     padding: 20px 16px !important;
   }
