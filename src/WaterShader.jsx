@@ -86,7 +86,7 @@ export default function WaterShader() {
     const uTime = gl.getUniformLocation(prog, 'u_time')
     const uMouse = gl.getUniformLocation(prog, 'u_mouse')
 
-    const scale = window.innerWidth > 820 ? 0.35 : 0.6
+    const scale = window.innerWidth > 820 ? 0.25 : 0.6
     const resize = () => {
       canvas.width = Math.round(window.innerWidth * scale)
       canvas.height = Math.round(window.innerHeight * scale)
@@ -108,7 +108,7 @@ export default function WaterShader() {
     const render = (now) => {
       raf = requestAnimationFrame(render)
       if (!visible) return
-      if (now - last < 20) return  // max ~50fps
+      if (now - last < 33) return  // max ~30fps
       last = now
       gl.uniform2f(uRes, canvas.width, canvas.height)
       gl.uniform1f(uTime, (performance.now() - start) / 1000)
