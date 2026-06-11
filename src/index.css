@@ -91,7 +91,7 @@ a { -webkit-tap-highlight-color: transparent; }
   .hero-btns { flex-wrap: nowrap !important; width: calc(100vw - 28px) !important; margin-top: 0 !important; }
   .hero-btns a { font-size: 13px !important; padding: 16px 0 !important; border-radius: 14px !important; white-space: nowrap !important; width: 50% !important; text-align: center !important; box-sizing: border-box !important; }
   .trust-bar { grid-template-columns: 1fr 1fr 1fr !important; gap: 0 !important; width: calc(100vw - 28px) !important; padding: 12px 6px !important; position: static !important; margin-top: 16px !important; }
-  .hero-content { justify-content: flex-start !important; padding-top: 180px !important; padding-bottom: 120px !important; }
+  .hero-content { justify-content: flex-start !important; padding-top: 180px !important; padding-bottom: 170px !important; }
   .hero-h1 { order: 1 !important; font-size: 58px !important; overflow: visible !important; }
   .hero-h1 span { overflow: visible !important; }
   .hero-kicker { order: 2 !important; margin-bottom: 0 !important; margin-top: 12px !important; }
