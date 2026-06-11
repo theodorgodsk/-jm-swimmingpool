@@ -106,7 +106,7 @@ a { -webkit-tap-highlight-color: transparent; }
 
   /* Sektion-padding */
   section:not(.hero-section):not(.split):not(.om-os-expertise):not(.kontakt-header):not(.kontakt-content):not(.advise-section) { padding-left: 5vw !important; padding-right: 5vw !important; padding-top: 80px !important; padding-bottom: 80px !important; }
-  section.advise-section { padding: 48px 5vw 80px !important; }
+  section.advise-section { padding: 76px 5vw 80px !important; }
   section.kontakt-content { padding: 60px 6vw 100px !important; }
   section.split { padding: 0 !important; min-height: unset !important; }
   .services-header { margin-bottom: 30px !important; }
