@@ -116,7 +116,7 @@ export default function NyPool() {
             <Reveal>
               <div className="advise-card" style={{
                 background: '#fff', borderRadius: 24, padding: 'clamp(32px, 4vw, 56px)',
-                boxShadow: '0 40px 90px rgba(10,37,64,0.14)', marginLeft: '-12%', position: 'relative'
+                boxShadow: '0 40px 90px rgba(10,37,64,0.14)', marginLeft: '-12%', marginTop: '22%', position: 'relative'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 22 }}>
                   <span style={{ width: 36, height: 2, background: C.sky, display: 'inline-block' }} />
