@@ -87,27 +87,34 @@ export default function WaterShader() {
     const uMouse = gl.getUniformLocation(prog, 'u_mouse')
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio, 2)
-      canvas.width = window.innerWidth * dpr
-      canvas.height = window.innerHeight * dpr
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
       gl.viewport(0, 0, canvas.width, canvas.height)
     }
     resize()
     window.addEventListener('resize', resize)
 
-    const onMove = e => { mouse.current = [e.clientX * 2, (window.innerHeight - e.clientY) * 2] }
+    const onMove = e => { mouse.current = [e.clientX, window.innerHeight - e.clientY] }
     window.addEventListener('mousemove', onMove)
 
     let raf
+    let visible = true
+    const observer = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
+    observer.observe(canvas)
+
     const start = performance.now()
-    const render = () => {
+    let last = 0
+    const render = (now) => {
+      raf = requestAnimationFrame(render)
+      if (!visible) return
+      if (now - last < 20) return  // max ~50fps
+      last = now
       gl.uniform2f(uRes, canvas.width, canvas.height)
       gl.uniform1f(uTime, (performance.now() - start) / 1000)
       gl.uniform2f(uMouse, mouse.current[0], mouse.current[1])
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
-      raf = requestAnimationFrame(render)
     }
-    render()
+    render(0)
 
     return () => {
       cancelAnimationFrame(raf)
