@@ -259,7 +259,7 @@ export default function Home() {
             <Reveal style={{ position: 'relative', zIndex: 3 }}>
               <div className="advise-card" style={{
                 background: '#fff', borderRadius: 24, padding: 'clamp(32px, 4vw, 56px)',
-                boxShadow: '0 40px 90px rgba(10,37,64,0.14)', marginRight: isMobile ? 0 : '-12%', position: 'relative', zIndex: 2
+                boxShadow: '0 40px 90px rgba(10,37,64,0.14)', marginRight: isMobile ? 0 : '-12%', marginTop: isMobile ? 0 : '38%', position: 'relative', zIndex: 2
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 22 }}>
                   <span style={{ width: 36, height: 2, background: C.sky, display: 'inline-block' }} />
