@@ -208,7 +208,7 @@ export default function Home() {
           </motion.p>
           <h1 className="hero-h1" style={{ fontSize: 'clamp(52px, 10vw, 140px)', lineHeight: 0.92, color: '#fff', fontWeight: 700, letterSpacing: '-0.04em', margin: 0 }}>
             {['SOMMER', 'HELE ÅRET'].map((line, li) => (
-              <span key={li} style={{ display: 'block', overflow: 'hidden', paddingBottom: '0.08em' }}>
+              <span key={li} style={{ display: 'block', overflow: 'hidden', paddingTop: '0.12em', paddingBottom: '0.08em' }}>
                 <motion.span style={{ display: 'inline-block' }} initial={{ y: '110%' }} animate={{ y: 0 }}
                   transition={{ duration: 1.1, delay: 0.5 + li * 0.12, ease: [0.22, 1, 0.36, 1] }}>
                   {line}
@@ -312,7 +312,7 @@ export default function Home() {
               <h2 style={{ fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 700, color: C.deep, letterSpacing: '-0.03em', lineHeight: 1 }}>Vores ydelser</h2>
             </div>
           </Reveal>
-          <div className="service-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '430px 430px', gap: 24 }}>
+          <div className="service-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gridTemplateRows: '430px 430px', gap: 24 }}>
             {serviceList.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.07} style={{ width: '100%' }}>
                 <Link to={`/${s.slug}`} className="service-card-link" style={{ textDecoration: 'none', display: 'flex', height: '100%', width: '100%' }}>
@@ -324,6 +324,7 @@ export default function Home() {
                       background: (i === 2 ? C.deep : i === 3 ? '#fff' : (i === 2 ? true : i === 3 ? false : i % 2 === 1) ? C.deep : '#fff'),
                       borderRadius: 28,
                       padding: 'clamp(32px, 3.5vw, 52px)',
+                      flex: 1,
                       height: '100%',
                       boxShadow: '0 12px 40px rgba(10,37,64,0.09)',
                       display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
