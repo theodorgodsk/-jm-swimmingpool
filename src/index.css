@@ -220,6 +220,11 @@ a { -webkit-tap-highlight-color: transparent; }
 
   /* Om Os - nummererede ekspertise punkter */
   .expertise-list { counter-reset: expertise; }
+  .expertise-list,
+  .expertise-item,
+  .expertise-item h3,
+  .expertise-item p,
+  .expertise-item::before { text-align: left !important; }
   .expertise-item { counter-increment: expertise; }
   .expertise-item::before {
     content: "0" counter(expertise);
