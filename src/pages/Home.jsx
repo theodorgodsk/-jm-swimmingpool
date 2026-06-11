@@ -312,9 +312,9 @@ export default function Home() {
               <h2 style={{ fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 700, color: C.deep, letterSpacing: '-0.03em', lineHeight: 1 }}>Vores ydelser</h2>
             </div>
           </Reveal>
-          <div className="service-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridAutoRows: 360, gap: 24 }}>
+          <div className="service-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {serviceList.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.07}>
+              <Reveal key={s.n} delay={i * 0.07} style={{ height: 380 }}>
                 <Link to={`/${s.slug}`} className="service-card-link" style={{ textDecoration: 'none', display: 'flex', height: '100%' }}>
                   <motion.div
                     className="service-card-inner"
@@ -327,7 +327,7 @@ export default function Home() {
                       height: '100%',
                       boxShadow: '0 12px 40px rgba(10,37,64,0.09)',
                       display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-                      marginTop: 0, minHeight: 360,
+                      marginTop: 0,
                     }}>
                     <div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 28 }}>
