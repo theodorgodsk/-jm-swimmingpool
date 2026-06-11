@@ -193,7 +193,7 @@ export default function Home() {
             <source src="/videos/pool-1280-720.mp4" type="video/mp4" />
           </video>
           {/* Mørkt overlay så teksten kan læses */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,24,40,0.95) 0%, rgba(10,24,40,0.5) 14%, rgba(10,37,64,0.40) 50%, rgba(10,24,40,0.60) 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,24,40,0.45) 0%, rgba(10,37,64,0.40) 50%, rgba(10,24,40,0.60) 100%)' }} />
         </motion.div>
         <motion.div className="hero-content" style={{
           position: 'relative', height: '100%', display: 'flex', flexDirection: 'column',
