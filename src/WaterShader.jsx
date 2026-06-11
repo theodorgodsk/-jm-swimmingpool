@@ -86,7 +86,7 @@ export default function WaterShader() {
     const uTime = gl.getUniformLocation(prog, 'u_time')
     const uMouse = gl.getUniformLocation(prog, 'u_mouse')
 
-    const scale = window.innerWidth > 820 ? 0.25 : 0.6
+    const scale = window.innerWidth > 820 ? 0.5 : 0.6
     const resize = () => {
       canvas.width = Math.round(window.innerWidth * scale)
       canvas.height = Math.round(window.innerHeight * scale)
