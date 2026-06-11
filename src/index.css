@@ -16,6 +16,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Hero fylder den faktisk synlige skærm (dvh = uden hvid stribe på iOS) */
+.hero-section {
+  height: 100vh; /* fallback for ældre browsere */
+  height: 100dvh !important;
+}
+
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
