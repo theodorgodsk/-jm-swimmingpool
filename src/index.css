@@ -122,6 +122,7 @@ a { -webkit-tap-highlight-color: transparent; }
   /* Service cards: 2 kolonner på mobil */
   .service-cards {
     grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
     grid-auto-rows: auto !important;
     gap: 12px !important;
   }
@@ -132,10 +133,12 @@ a { -webkit-tap-highlight-color: transparent; }
   .service-card-inner > div:first-child > div:nth-child(2) { margin-bottom: 16px !important; }
   .service-card-inner h3 { font-size: 18px !important; margin-bottom: 10px !important; }
   .service-card-inner p { font-size: 13px !important; line-height: 1.7 !important; }
-  .service-card-inner > div:last-child { margin-top: 28px !important; }
+  .service-card-inner > div:last-child { margin-top: 18px !important; }
   .service-card-inner {
-    padding: 20px 16px !important;
+    padding: 18px 16px !important;
   }
+  .service-card-inner > div:first-child > div:nth-child(1) { margin-bottom: 12px !important; }
+  .service-card-inner > div:first-child > div:nth-child(2) { margin-bottom: 10px !important; }
   .service-card-inner h3 {
     font-size: 18px !important;
     text-align: center !important;
