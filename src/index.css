@@ -66,6 +66,7 @@ a { -webkit-tap-highlight-color: transparent; }
   .advise-text-desktop { display: none !important; }
   .advise-card h2 { font-size: 26px !important; }
   .advise-card a { display: block !important; width: fit-content !important; margin: 0 auto !important; }
+  .split-text > a { display: block !important; width: fit-content !important; margin: 0 auto !important; }
   .advise-card p[style*="italic"] { font-size: 18px !important; }
   .stat-badge { display: none !important; }
   .advise-text-mobile { display: block !important; }
