@@ -54,7 +54,7 @@ export function Reveal({ children, y = 60, delay = 0, style }) {
   const inView = useInView(ref, { once: true, margin: '-80px' })
   return (
     <motion.div
-      ref={ref} style={style}
+      ref={ref} style={{ height: '100%', ...style }}
       initial={{ opacity: 0, y }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.9, delay, ease }}
