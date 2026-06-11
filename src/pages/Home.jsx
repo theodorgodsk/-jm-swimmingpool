@@ -314,8 +314,8 @@ export default function Home() {
           </Reveal>
           <div className="service-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
             {serviceList.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.07} style={{ height: 380 }}>
-                <Link to={`/${s.slug}`} className="service-card-link" style={{ textDecoration: 'none', display: 'flex', height: '100%' }}>
+              <Reveal key={s.n} delay={i * 0.07} style={{ height: 380, width: '100%' }}>
+                <Link to={`/${s.slug}`} className="service-card-link" style={{ textDecoration: 'none', display: 'flex', height: '100%', width: '100%' }}>
                   <motion.div
                     className="service-card-inner"
                     whileHover={{ y: -8, boxShadow: '0 40px 80px rgba(10,37,64,0.16)' }}
