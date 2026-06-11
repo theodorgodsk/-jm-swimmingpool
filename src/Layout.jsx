@@ -66,6 +66,15 @@ function ServiceDropdown() {
 export default function Layout() {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  // Nav bliver gradient/blur når man scroller, gennemsigtig i toppen
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // Smooth scroll
   useEffect(() => {
@@ -93,9 +102,14 @@ export default function Layout() {
       >
         <div style={{
           width: '100%', maxWidth: 1240, display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          background: 'rgba(10,24,40,0.92)', backdropFilter: 'blur(14px)',
-          border: '1px solid rgba(255,255,255,0.08)', borderRadius: 22, padding: '12px 16px',
-          boxShadow: '0 18px 50px rgba(10,37,64,0.28)'
+          background: scrolled
+            ? 'linear-gradient(to bottom, rgba(10,24,40,0.85), rgba(10,24,40,0.55))'
+            : 'transparent',
+          backdropFilter: scrolled ? 'blur(14px)' : 'none',
+          border: `1px solid ${scrolled ? 'rgba(255,255,255,0.08)' : 'transparent'}`,
+          borderRadius: 22, padding: '12px 16px',
+          boxShadow: scrolled ? '0 18px 50px rgba(10,37,64,0.28)' : 'none',
+          transition: 'background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease'
         }}>
           {/* Logo i hvid chip */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
