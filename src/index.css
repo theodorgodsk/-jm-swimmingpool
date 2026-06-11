@@ -125,10 +125,12 @@ a { -webkit-tap-highlight-color: transparent; }
   }
   .service-cards > div { min-width: 0 !important; width: 100% !important; height: auto !important; }
   .service-card-link { width: 100% !important; }
-  .service-card-inner { height: auto !important; padding: 28px 20px !important; }
-  .service-card-inner h3 { font-size: 17px !important; margin-bottom: 8px !important; }
-  .service-card-inner p { font-size: 13px !important; line-height: 1.6 !important; }
-  .service-card-inner > div:last-child { margin-top: 20px !important; }
+  .service-card-inner { height: auto !important; padding: 32px 20px !important; }
+  .service-card-inner > div:first-child > div:nth-child(1) { margin-bottom: 20px !important; }
+  .service-card-inner > div:first-child > div:nth-child(2) { margin-bottom: 16px !important; }
+  .service-card-inner h3 { font-size: 18px !important; margin-bottom: 10px !important; }
+  .service-card-inner p { font-size: 13px !important; line-height: 1.7 !important; }
+  .service-card-inner > div:last-child { margin-top: 28px !important; }
   .service-card-inner {
     padding: 20px 16px !important;
   }
